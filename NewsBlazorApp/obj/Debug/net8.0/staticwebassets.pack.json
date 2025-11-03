@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Derek\\news101\\NewsBlazorApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\NewsBlazorApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\NewsBlazorApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Derek\\news101\\NewsBlazorApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Derek\\news101\\NewsBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Derek\\news101\\NewsBlazorApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Derek\\news101\\NewsBlazorApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.NewsBlazorApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.NewsBlazorApp.props",
+      "PackagePath": "build\\NewsBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.NewsBlazorApp.props",
+      "PackagePath": "buildMultiTargeting\\NewsBlazorApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.NewsBlazorApp.props",
+      "PackagePath": "buildTransitive\\NewsBlazorApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
