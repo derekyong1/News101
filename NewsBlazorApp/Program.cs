@@ -1,10 +1,17 @@
 using NewsBlazorApp.Components;
+using NewsBlazorApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorComponents();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddHttpClient<NewsService>(client =>
+{
+    client.BaseAddress = new Uri(builder.Configuration["NewsApi:BaseUrl"]!);
+});
+builder.Services.AddScoped<NewsService>();
+
 
 var app = builder.Build();
 
