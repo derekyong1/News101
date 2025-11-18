@@ -1,7 +1,73 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+@using NewsBlazorApp.Models
 
-<h1>Hello, world!</h1>
+@inject NavigationManager Nav
 
-Welcome to your new app.
+<PageTitle>Top Headlines</PageTitle>
+
+<div class="row mb-3">
+    <div class="col-md-6">
+        <InputText @bind-Value="searchQuery" class="form-control" placeholder="Search news..." />
+    </div>
+    <div class="col-md-3">
+        <select @bind="selectedCategory" class="form-select">
+            <option value="">All Categories</option>
+            <option value="business">Business</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="health">Health</option>
+            <option value="science">Science</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <button class="btn btn-primary w-100" @onclick="LoadNews">Search</button>
+    </div>
+</div>
+
+@if (loading)
+{
+    <div class="text-center"><div class="spinner-border"></div></div>
+}
+else if (articles?.Any() == true)
+{
+    <div class="row">
+        @foreach (var article in articles)
+        {
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    @if (!string.IsNullOrWhiteSpace(article.UrlToImage))
+                    {
+                        <img src="@article.UrlToImage" class="card-img-top" style="height:200px; object-fit:cover;" alt="Image">
+                    }
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@article.Title</h5>
+                        <p class="card-text text-muted small">
+                            @article.Source?.Name • @article.PublishedAt?.ToString("MMM dd, yyyy")
+                        </p>
+                        <p class="card-text flex-grow-1">@article.Description</p>
+                        <a href="@article.Url" target="_blank" class="btn btn-outline-primary mt-auto">Read more →</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <nav>
+        <ul class="pagination justify-content-center">
+            <li class="page-item @(currentPage <= 1 ? "disabled" : "")">
+                <button class="page-link" @onclick="() => ChangePage(currentPage - 1)">Previous</button>
+            </li>
+            <li class="page-item active"><span class="page-link">@currentPage</span></li>
+            <li class="page-item @(articles.Count < 20 ? "disabled" : "")">
+                <button class="page-link" @onclick="() => ChangePage(currentPage + 1)">Next</button>
+            </li>
+        </ul>
+    </nav>
+}
+else
+{
+    <p>No articles found.</p>
+}
+

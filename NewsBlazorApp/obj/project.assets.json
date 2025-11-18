@@ -943,19 +943,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Derek\\.nuget\\packages\\": {}
+    "/Users/derekyong/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Derek\\news101\\NewsBlazorApp\\NewsBlazorApp.csproj",
+      "projectUniqueName": "/Users/derekyong/Projects/News101/NewsBlazorApp/NewsBlazorApp.csproj",
       "projectName": "NewsBlazorApp",
-      "projectPath": "C:\\Users\\Derek\\news101\\NewsBlazorApp\\NewsBlazorApp.csproj",
-      "packagesPath": "C:\\Users\\Derek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Derek\\news101\\NewsBlazorApp\\obj\\",
+      "projectPath": "/Users/derekyong/Projects/News101/NewsBlazorApp/NewsBlazorApp.csproj",
+      "packagesPath": "/Users/derekyong/.nuget/packages/",
+      "outputPath": "/Users/derekyong/Projects/News101/NewsBlazorApp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Derek\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/derekyong/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -978,7 +978,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -1004,6 +1005,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.21, 8.0.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-arm64",
+            "version": "[8.0.21, 8.0.21]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.21, 8.0.21]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1012,7 +1027,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
